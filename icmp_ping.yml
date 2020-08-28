@@ -1,0 +1,13 @@
+---
+- name: Create VLAN and Verify
+  hosts: access
+  connection: localhost
+  gather_facts: no
+
+  tasks:
+    - name: Ping and Register Result
+      local_action: command ping -q -c 5 -i .2
+      register: ping_result
+
+    - debug:
+        msg: "{{ ping_result.stdout_lines }}"
