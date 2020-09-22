@@ -7,6 +7,6 @@
     - name: Ping and Register Result
       local_action: command ping -q -c 5 -i .2
       register: ping_result
-
+##Try delegate to
     - debug:
         msg: "{{ ping_result.stdout_lines }}"
