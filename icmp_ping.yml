@@ -5,7 +5,7 @@
 
   tasks:
     - name: Ping and Register Result
-      local_action: command ping -q -c 5 -i .2
+      local_action: command ping {{ ansible_host }} -q -c 5 -i .2
       register: ping_result
 ##Try delegate to
     - debug:
