@@ -1,7 +1,6 @@
 ---
 - name: Create VLAN and Verify
   hosts: access
-  connection: localhost
   gather_facts: no
 
   tasks:
